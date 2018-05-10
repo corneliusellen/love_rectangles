@@ -20,8 +20,8 @@ describe("Rectangle", function(){
   })
 
   describe("methods", function() {
-    it("can find the intersection of 2 rectangles", function() {
-      
+    it("can find the leftX of rectangle 3 from the intersection of 2 rectangles", function() {
+      assert.equal(rectangle1.findLove(rectangle2), 4)
     })
   })
 })
