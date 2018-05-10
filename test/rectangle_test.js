@@ -4,7 +4,7 @@ const Rectangle = require('../rectangle')
 
 describe("Rectangle", function(){
   const rectangle1 = new Rectangle(1, 2, 6, 3)
-  const rectangle2 = new Rectangle(4, 2, 6, 3)
+  const rectangle2 = new Rectangle(4, 2, 3, 3)
   describe("attributes", function() {
     it("can create 2 rectangles", function() {
 
@@ -14,7 +14,7 @@ describe("Rectangle", function(){
       assert.equal(rectangle1.height, 3);
       assert.equal(rectangle2.leftX, 4);
       assert.equal(rectangle2.bottomY, 2);
-      assert.equal(rectangle2.width, 6);
+      assert.equal(rectangle2.width, 3);
       assert.equal(rectangle2.height, 3);
     })
   })
@@ -26,6 +26,10 @@ describe("Rectangle", function(){
 
     it("can find the bottomyY of rectangle 3 from the intersection of 2 rectangles", function() {
       assert.equal(rectangle1.findBottomY(rectangle2), 2)
+    })
+
+    it("can find the width of rectangle 3 from the intersection of 2 rectangles", function() {
+      assert.equal(rectangle1.findWidth(rectangle2), 3)
     })
   })
 })
