@@ -33,10 +33,10 @@ Rectangle.prototype.findWidth = function(rectangle2) {
 }
 
 Rectangle.prototype.findHeight = function(rectangle2) {
-  if (this.height < rectangle2.height) {
-    var rectangle3Height = rectangle2.height
+  if (this.bottomY < rectangle2.bottomY) {
+    var rectangle3Height = (this.height + this.bottomY) - (rectangle2.bottomY)
   } else {
-    var rectangle3Height = this.height
+    var rectangle3Height = (rectangle2.height + rectangle2.bottomY) - (this.bottomY)
   }
   return rectangle3Height
 }
