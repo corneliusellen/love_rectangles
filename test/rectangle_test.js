@@ -21,7 +21,11 @@ describe("Rectangle", function(){
 
   describe("methods", function() {
     it("can find the leftX of rectangle 3 from the intersection of 2 rectangles", function() {
-      assert.equal(rectangle1.findLove(rectangle2), 4)
+      assert.equal(rectangle1.findLeftX(rectangle2), 4)
+    })
+
+    it("can find the bottomyY of rectangle 3 from the intersection of 2 rectangles", function() {
+      assert.equal(rectangle1.findBottomY(rectangle2), 2)
     })
   })
 })
