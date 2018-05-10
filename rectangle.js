@@ -25,11 +25,20 @@ Rectangle.prototype.findBottomY = function(rectangle2) {
 
 Rectangle.prototype.findWidth = function(rectangle2) {
   if (this.width < rectangle2.width) {
-    var rectangle3BottomY = (rectangle2.bottomX + rectangle2.width) - (this.bottomX + this.width)
+    var rectangle3Width = rectangle2.width - this.width
   } else {
-    var rectangle3BottomY = (this.bottomX + this.width) - (rectangle2.bottomX + rectangle2.width)
+    var rectangle3Width = this.width - rectangle2.width
   }
-  return rectangle3BottomY
+  return rectangle3Width
+}
+
+Rectangle.prototype.findHeight = function(rectangle2) {
+  if (this.height < rectangle2.height) {
+    var rectangle3Height = rectangle2.height
+  } else {
+    var rectangle3Height = this.height
+  }
+  return rectangle3Height
 }
 
 module.exports = Rectangle
