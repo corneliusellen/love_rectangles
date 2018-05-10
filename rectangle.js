@@ -41,4 +41,12 @@ Rectangle.prototype.findHeight = function(rectangle2) {
   return rectangle3Height
 }
 
+Rectangle.prototype.findLove = function(rectangle2) {
+  var rec3leftX = this.findLeftX(rectangle2);
+  var rec3BottomY = this.findBottomY(rectangle2);
+  var rec3Width = this.findWidth(rectangle2);
+  var rec3Height = this.findHeight(rectangle2);
+  return new Rectangle(rec3leftX, rec3BottomY, rec3Width, rec3Height)
+}
+
 module.exports = Rectangle
