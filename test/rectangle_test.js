@@ -1,5 +1,6 @@
 assert = require('chai').assert;
 const Rectangle = require('../rectangle')
+pry = require('pryjs')
 // const findLove = require('../rectangle').findLove
 
 describe("Rectangle", function(){
@@ -34,6 +35,11 @@ describe("Rectangle", function(){
 
     it("can find the height of rectangle 3 from the intersection of 2 rectangles", function() {
       assert.equal(rectangle1.findHeight(rectangle2), 2)
+    })
+
+    it("can find rectangle 3 from the intersection of 2 rectangles", function() {
+      var rec3 = new Rectangle(4, 2, 3, 2)
+      assert.deepEqual(rectangle1.findLove(rectangle2), rec3)
     })
   })
 })
